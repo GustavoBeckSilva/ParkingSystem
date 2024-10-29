@@ -30,7 +30,10 @@ public class JPAPersistance implements DataBaseInterface{
 
     @Override
     public void persist(Object o) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EntityManager entity =  getEntityManager();
+        entity.getTransaction().begin();
+        entity.persist(o);
+        entity.getTransaction().commit();
     }
 
     @Override
@@ -38,6 +41,12 @@ public class JPAPersistance implements DataBaseInterface{
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public EntityManager getEntityManager(){
+        if(entity == null || !entity.isOpen())
+            entity = factory.createEntityManager();
+        
+        return entity;
+    }
 
     
     

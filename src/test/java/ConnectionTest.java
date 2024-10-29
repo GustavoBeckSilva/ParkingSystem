@@ -4,6 +4,7 @@
  */
 
 import dao.JPAPersistance;
+import model.VehicleModel;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -52,6 +53,15 @@ public class ConnectionTest {
     //
     @Test
     public void hello() {
-        System.out.println("Conexão aberta com sucesso.");
+        VehicleModel vm = new VehicleModel();
+        
+        vm.setVehicleModelDescription("JAVACAR");
+        
+        try{
+            jpa.persist(vm);
+        }
+        catch(Exception e){
+            
+        }
     }
 }
