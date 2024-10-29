@@ -28,14 +28,6 @@
             <scope>test</scope>
             <version>4.11</version>
         </dependency>
-        <!--
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1212</version>
-        </dependency>
-       
-        -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -46,9 +38,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
         </dependency>
-        <!--
-        o avax.xml.bind pode ser necessario caso esteja utilizando openjdk 11
-        -->
+        <!-- O javax.xml.bind pode ser necessário caso esteja utilizando openjdk 11 -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>

@@ -1,4 +1,3 @@
-
 package model;
 
 import javax.persistence.Column;
@@ -11,12 +10,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_vehicle_model")
 public class VehicleModel {
+
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Id // implement seriarizable
-    
-    @Column(name = "example")
-    private String vehicleModelDescription;
+    @Column(name = "vehicle_model_id")
     private int vehicleModelId;
+
+    @Column(name = "description")
+    private String vehicleModelDescription;
 
     public String getVehicleModelDescription() {
         return vehicleModelDescription;
@@ -33,6 +34,4 @@ public class VehicleModel {
     public void setVehicleModelId(int vehicleModelId) {
         this.vehicleModelId = vehicleModelId;
     }
-    
-    
 }

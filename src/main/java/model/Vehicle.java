@@ -1,11 +1,26 @@
-
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_vehicle")
 public class Vehicle {
-    
-    private String vehiclePlate;
-    private String vehicleColor;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "vehicle_id")
     private int vehicleId;
+
+    @Column(name = "plate")
+    private String vehiclePlate;
+
+    @Column(name = "color")
+    private String vehicleColor;
 
     public String getVehiclePlate() {
         return vehiclePlate;
@@ -30,6 +45,4 @@ public class Vehicle {
     public void setVehicleId(int vehicleId) {
         this.vehicleId = vehicleId;
     }
-    
-    
 }
