@@ -1,2 +1,2 @@
-# ParkingSystem
-Projeto em Java criado na matéria de Linguagem de Programação Orientada a Objetos, período 2024/2 no IFSul Passo Fundo.
+# LPOO_2024-2_EstacionamentoIFSUL
+Repositório do projeto construído em conjunto com a disciplina de APS e LPOO para a modelagem do sistema de estacionamento do IFSUL

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>ParkingSystem</artifactId>
+    <groupId>br.edu.ifsul.cc.lpoo.estacionamentoIFSUL</groupId>
+    <artifactId>LPOO_SistemaEstacionamentoIFSUL</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>com.mycompany.parkingsystem.ParkingSystem</exec.mainClass>
+        <exec.mainClass>br.edu.ifsul.cc.lpoo.estacionamentoifsul.lpoo_sistemaestacionamentoifsul.LPOO_SistemaEstacionamentoIFSUL</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>
@@ -28,6 +28,14 @@
             <scope>test</scope>
             <version>4.11</version>
         </dependency>
+        <!-- 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1212</version>
+        </dependency>
+        
+        -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -38,7 +46,9 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
         </dependency>
-        <!-- O javax.xml.bind pode ser necessário caso esteja utilizando openjdk 11 -->
+        <!-- 
+        o avax.xml.bind pode ser necessario caso esteja utilizando openjdk 11
+        -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
@@ -84,24 +94,6 @@
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
             <version>2.7.12</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.6.0</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
