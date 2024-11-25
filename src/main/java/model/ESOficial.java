@@ -5,6 +5,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
 @Entity
 @DiscriminatorValue("veiculo_oficial")
 public class ESOficial extends EntradaSaida{

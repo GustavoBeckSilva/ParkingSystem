@@ -19,6 +19,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "tipo_veiculo_es", discriminatorType = DiscriminatorType.STRING)
@@ -33,9 +34,8 @@ public class EntradaSaida implements Serializable{
     private Date data;
     
     @Enumerated(EnumType.STRING)
-   
     private TipoMovimentacao tipoMovimentacao;
-    
+        
     @ManyToOne
     @JoinColumn(name = "es_veiculo")
     private final Veiculo veiculo;

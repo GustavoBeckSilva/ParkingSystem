@@ -4,6 +4,7 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -92,6 +93,13 @@ public class Pessoa implements Serializable {
     public List<Veiculo> getListaVeiculos() {
         return listaVeiculos;
     }
+
+    @Override
+    public String toString() {
+        return nome+" ("+vinculoPessoa+")";
+    }
+
+    
     
     
 }
