@@ -29,6 +29,11 @@ public class MainJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         menuCadastro.setText("Cadastro");
+        menuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCadastroActionPerformed(evt);
+            }
+        });
 
         miPessoa.setText("Pessoa");
         miPessoa.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +92,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void miVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miVeiculoActionPerformed
-        // TODO add your handling code here:
+        TelaVeiculo telaVeiculo = new TelaVeiculo();
+        telaVeiculo.setVisible(true);
     }//GEN-LAST:event_miVeiculoActionPerformed
 
     private void miSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSobreActionPerformed
@@ -99,6 +105,10 @@ public class MainJFrame extends javax.swing.JFrame {
         TelaPessoa telaPessoa = new TelaPessoa();
         telaPessoa.setVisible(true);
     }//GEN-LAST:event_miPessoaActionPerformed
+
+    private void menuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroActionPerformed
+  
+    }//GEN-LAST:event_menuCadastroActionPerformed
 
     /**
      * @param args the command line arguments
